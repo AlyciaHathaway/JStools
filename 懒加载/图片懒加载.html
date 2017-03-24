@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>图片懒加载</title>
+	<style>
+		ul, li {
+		    list-style: none;
+		    margin: 0;
+		    padding: 0;
+		}
+
+		.container {
+		    width: 800px;
+		    margin: 0 auto;
+		}
+
+		.container li {
+		    float: left;
+		    margin: 10px 10px;
+		}
+
+		.container li img {
+		    width: 220px;
+		    height: 400px;
+		}
+	</style>
+</head>
+<body>
+
+    <ul class="container">
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        <li><a href=""><img src="" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" alt=""></a></li>
+        
+    </ul>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+		check();
+		// 然后再执行加载的图片
+		$(window).on('scroll', check);
+
+		//开始的时候先展示几张图片 
+		function check() {
+			// 查找没有被加标识符的
+			$('.container img').not('.load').each(function() {
+				if(isShow($(this))) {
+					showImg($(this))
+				}
+			})
+		}
+
+		function showImg($imgs) {
+			$imgs.each(function() {
+				var imgUrl = $(this).attr('data-src');
+				$(this).attr('src', imgUrl);
+				// 被展示的加上一个标识符
+				$(this).addClass('load');
+			})
+		}
+
+		function isShow($node) {
+			var windowHeight = $(window).height(),
+				scrollTop = $(window).scrollTop(),
+				offsetTop = $node.offset().top,
+				nodeHeight = $node.height();
+			if (windowHeight + scrollTop > offsetTop && scrollTop < offsetTop + nodeHeight) {
+				return true;
+			}else {
+				return false;
+			}
+		}
+	</script>
+
+</body>
+</html>
